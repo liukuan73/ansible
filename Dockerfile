@@ -20,4 +20,5 @@ RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 RUN yum install -y epel-release
 RUN yum install -y python-pip
 RUN pip install netaddr==0.7.19 jinja2==2.8 coverage==4.5.1 junit-xml==1.8 ansible==2.4.0
+COPY ansible.cfg /etc/ansible/
 CMD ["/usr/sbin/init"]
