@@ -16,6 +16,7 @@ VOLUME [/sys/fs/cgroup /run /tmp]
 
 USER root
 RUN mkdir /etc/ansible
+RUN mkdir -p /dcos/kubespray
 RUN echo -e '[local]\nlocalhost ansible_connection=local' > /etc/ansible/hosts
 RUN yum install -y epel-release
 RUN yum install -y python-pip
